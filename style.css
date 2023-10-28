@@ -1,4 +1,4 @@
-# Front-end Style Guide
+/* # Front-end Style Guide
 
 ## Layout
 
@@ -31,3 +31,19 @@ The designs were created to the following widths:
 
 - Family: [Outfit](https://fonts.google.com/specimen/Outfit)
 - Weights: 300, 400, 600
+ */
+
+
+*,*::after,*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+html{
+  font-size: 0.625em;
+}
+
+body{
+  font-family: "Outfit" ;
+}
