@@ -37,13 +37,158 @@ The designs were created to the following widths:
 *,*::after,*::before{
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 
 html{
   font-size: 0.625em;
 }
 
-body{
-  font-family: "Outfit" ;
+body {
+  font-family: Outfit;
+  background-color: hsl(217, 54%, 11%);
+  color:hsl(215, 51%, 70%);
+  padding:20vh 0 10vw;
 }
+
+.container {
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: hsl(216, 50%, 16%);
+  width: 28.5rem;
+  min-height: 51rem;
+  border-radius: 12px;
+  box-shadow: 0px 10px 12px 10px hsl(216, 50%, 8%);
+  display: flex;
+  flex-direction: column;
+}
+
+.img-nft{
+  width: 100%;
+  border-radius: 7px;
+  display: block;
+}
+
+.img-box{
+  position: relative;
+  cursor: pointer;
+}
+
+.img-box::before{
+  content: "";
+  position:absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: hsl(178, 100%, 40%);
+  transition: all 0.2s ease-out;
+  border-radius: 7px;
+}
+
+.img-box:hover::before{
+  opacity: 0.5;
+}
+
+ svg{
+  display: none;
+  opacity: 0;
+}
+
+.img-box:hover > svg{
+  display:block;
+  opacity: 1;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.nft-text-box{
+  margin-top: 1.6rem;
+  padding-bottom: 2.2rem;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+
+.nft-name{
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.nft-name:hover{
+  color:hsl(178, 100%, 50%);
+}
+
+.nft-description{
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 22px;
+  color: hsl(215, 51%, 70%);
+}
+
+.info-row{
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price{
+font-weight: 600;
+color: hsl(178, 100%, 50%);
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.deadline{
+  display: flex;
+  align-items: center;
+  gap:0.5rem
+}
+
+.author-box{
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.author-img img{
+  height: 3rem;
+  outline: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+
+.author-description{
+  margin-left: 1.6rem;
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
+.author-name{
+  color:hsl(0, 0%, 100%);
+  font-weight: 300;
+  cursor:pointer;
+  transition: color 0.2s ease;
+}
+.author-name:hover{
+  color:hsl(178, 100%, 50%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  transition: color 0.2s ease;
+  text-decoration: none;
+  }
+.attribution a:hover {
+  color:hsl(178, 100%, 40%);
+  }
