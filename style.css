@@ -91,7 +91,7 @@ body {
   opacity: 0.5;
 }
 
- svg{
+ .view-icon{
   display: none;
   opacity: 0;
 }
